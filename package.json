@@ -1,0 +1,28 @@
+{
+  "name": "@linonetwo012/tiddlywiki-llm-dataset",
+  "version": "1.0.0",
+  "description": "WikiText syntax dataset for auto UI generation in TiddlyWiki.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiddly-gittly/TiddlyWiki-LLM-dataset.git"
+  },
+  "keywords": [
+    "tiddlywiki",
+    "LLM",
+    "dataset",
+    "dsl"
+  ],
+  "author": "linonetwo",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tiddly-gittly/TiddlyWiki-LLM-dataset/issues"
+  },
+  "homepage": "https://github.com/tiddly-gittly/TiddlyWiki-LLM-dataset#readme",
+  "dependencies": {
+    "zx": "^8.1.9"
+  }
+}
