@@ -4,7 +4,7 @@ WikiText syntax dataset for auto UI generation in TiddlyWiki.
 
 ## Pipeline
 
-1. Read folders in the config. This will create snapshot of TW core and plugins. And skip the duplication if text is same as first item's input (See [data](./data/Readme.md) for detail about snapshot).
+1. Read folders in the config. This will create snapshot of TW core and plugins. And skip the duplication if text is same as first item's input (See [Data](./data/Readme.md) for detail about snapshot).
 1. Generate more QA pair with templates
 1. Generate missing Q or A using LLM
 1. Generate review API call and upload to review platform
