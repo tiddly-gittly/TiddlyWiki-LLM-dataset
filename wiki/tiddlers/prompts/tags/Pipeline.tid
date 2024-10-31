@@ -1,0 +1,4 @@
+title: Pipeline
+list: AddComment
+
+Prompt for the pipeline, used in the pipeline to generate the data.

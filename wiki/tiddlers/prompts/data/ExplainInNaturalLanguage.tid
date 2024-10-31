@@ -1,0 +1,16 @@
+title: ExplainInNaturalLanguage
+tags: Prompt Data
+prompt: Explain the wikitext in natural language for user new to WikiText.
+
+<|im_start|>system
+{{!!prompt}}
+<|im_end|>
+<|im_start|>user
+What does this mean?
+```tid
+<<InputWikiText>>
+```
+<|im_end|>
+<|im_start|>assistant
+<<AIOutput>>
+<|im_end|>

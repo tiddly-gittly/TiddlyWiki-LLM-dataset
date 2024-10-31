@@ -4,6 +4,8 @@
   "description": "WikiText syntax dataset for auto UI generation in TiddlyWiki.",
   "main": "index.js",
   "scripts": {
+    "dev": "tiddlywiki-plugin-dev dev",
+    "dev:wiki": "tiddlywiki-plugin-dev dev --write-wiki",
     "clean": "rimraf dist",
     "publish": "npm run clean && tiddlywiki-plugin-dev publish"
   },

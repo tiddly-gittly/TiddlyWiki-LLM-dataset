@@ -1,0 +1,13 @@
+title: AddComment
+tags: Prompt Data
+prompt: Add comments to explain the wikitext line by line
+
+<|im_start|>system
+{{!!prompt}}
+<|im_end|>
+<|im_start|>user
+<<InputWikiText>>
+<|im_end|>
+<|im_start|>assistant
+<<AIOutput>>
+<|im_end|>
