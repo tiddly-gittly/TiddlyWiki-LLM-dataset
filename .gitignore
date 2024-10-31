@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+wiki/tiddlers/system/$__StoryList.tid
+wiki/tiddlers/system/$__layout.tid
+wiki/tiddlers/system/$__palette.tid
