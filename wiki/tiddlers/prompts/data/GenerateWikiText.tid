@@ -1,6 +1,6 @@
 title: GenerateWikiText
 tags: Prompt Data
-prompt: What will user ask to generate this WikiText?
+prompt: What will user ask to generate this WikiText (not including the metadata on the top)?
 
 <|im_start|>system
 You are a helpful TiddlyWiki community member, you want to help new users write WikiText for their wiki or TW plugins.
