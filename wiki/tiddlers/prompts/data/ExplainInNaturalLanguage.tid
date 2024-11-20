@@ -8,9 +8,9 @@ prompt: Explain the wikitext in natural language for user new to WikiText.
 <|im_start|>user
 What does this mean?
 ```tid
-<<InputWikiText>>
+<<inputWikiText>>
 ```
 <|im_end|>
 <|im_start|>assistant
-<<AIOutput>>
+<<aIOutput>>
 <|im_end|>

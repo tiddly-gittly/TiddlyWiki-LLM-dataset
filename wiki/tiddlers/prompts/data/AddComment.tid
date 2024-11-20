@@ -6,8 +6,8 @@ prompt: Add comments to explain the wikitext line by line
 {{!!prompt}}
 <|im_end|>
 <|im_start|>user
-<<InputWikiText>>
+<<inputWikiText>>
 <|im_end|>
 <|im_start|>assistant
-<<AIOutput>>
+<<aIOutput>>
 <|im_end|>

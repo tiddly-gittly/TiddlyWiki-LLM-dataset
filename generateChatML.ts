@@ -13,7 +13,7 @@ const wikiPath = join(Deno.cwd(), "wiki");
 wikiInstance.boot.argv = [wikiPath, "--version"];
 wikiInstance.boot.startup({});
 
-export async function generateChatML(tidContent: string): Promise<string> {
+export async function generateChatML(inputWikiText: string): Promise<string> {
   const dataPromptTiddlers = wikiInstance.wiki.filterTiddlers(
     `[!is[system]tag[Prompt]tag[Data]]`,
   )
@@ -24,14 +24,15 @@ export async function generateChatML(tidContent: string): Promise<string> {
   const chatmlContents = await Promise.all(
     dataPromptTiddlers.map(async (tiddler) => {
       const prompt = tiddler.fields.prompt as string;
-      const AIOutput = await callLLM(prompt, tidContent);
+      const aIOutput = await callLLM(prompt, inputWikiText);
       const chatmlContent = wikiInstance.wiki.renderTiddler(
         "text/plain",
         tiddler.fields.title,
         {
           variables: {
             prompt,
-            AIOutput,
+            aIOutput,
+            inputWikiText,
           },
         },
       );
