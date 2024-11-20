@@ -6,7 +6,9 @@
     "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/path@^1.0.7": "1.0.8",
     "jsr:@std/path@^1.0.8": "1.0.8",
-    "npm:tiddlywiki@^5.3.6": "5.3.6"
+    "npm:tiddlywiki@^5.3.6": "5.3.6",
+    "npm:tw5-typed@*": "0.5.14",
+    "npm:tw5-typed@~0.5.14": "0.5.14"
   },
   "jsr": {
     "@std/assert@1.0.8": {
@@ -29,8 +31,49 @@
     }
   },
   "npm": {
+    "@types/codemirror@5.60.15": {
+      "integrity": "sha512-dTOvwEQ+ouKJ/rE9LT1Ue2hmP6H1mZv5+CCnNWu2qtiOe2LQa9lCprEY20HxiDmV/Bxh+dXjywmy5aKvoGjULA==",
+      "dependencies": [
+        "@types/tern"
+      ]
+    },
+    "@types/echarts@4.9.22": {
+      "integrity": "sha512-7Fo6XdWpoi8jxkwP7BARUOM7riq8bMhmsCtSG8gzUcJmFhLo387tihoBYS/y5j7jl3PENT5RxeWZdN9RiwO7HQ==",
+      "dependencies": [
+        "@types/zrender"
+      ]
+    },
+    "@types/estree@1.0.6": {
+      "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
+    },
+    "@types/node@20.17.6": {
+      "integrity": "sha512-VEI7OdvK2wP7XHnsuXbAJnEpEkF6NjSN45QJlL4VGqZSXsnicpesdTWsg9RISeSdYd3yeRj/y3k5KGjUXYnFwQ==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "@types/tern@0.23.9": {
+      "integrity": "sha512-ypzHFE/wBzh+BlH6rrBgS5I/Z7RD21pGhZ2rltb/+ZrVM1awdZwjx7hE5XfuYgHWk9uvV5HLZN3SloevCAp3Bw==",
+      "dependencies": [
+        "@types/estree"
+      ]
+    },
+    "@types/zrender@4.0.6": {
+      "integrity": "sha512-1jZ9bJn2BsfmYFPBHtl5o3uV+ILejAtGrDcYSpT4qaVKEI/0YY+arw3XHU04Ebd8Nca3SQ7uNcLaqiL+tTFVMg=="
+    },
     "tiddlywiki@5.3.6": {
       "integrity": "sha512-RfWt+Bo/UsTdzP5N4nEInjaJjgAzylUMf21hE4FL5v65c3x054+A+3g3sgW1m68lTJbTbiiqSZ6q6BEIZMwhSQ=="
+    },
+    "tw5-typed@0.5.14": {
+      "integrity": "sha512-9V3Fr9wBQxzdFD3eSAv8vzDHfAYAkweg8rB8mu8rRxgflpxib+saSi3UaiR/rH2NzMNU/dg9nHFa/EVI9WiGYA==",
+      "dependencies": [
+        "@types/codemirror",
+        "@types/echarts",
+        "@types/node"
+      ]
+    },
+    "undici-types@6.19.8": {
+      "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     }
   },
   "remote": {
@@ -64,7 +107,8 @@
       "jsr:@std/assert@1",
       "jsr:@std/fs@^1.0.5",
       "jsr:@std/path@^1.0.8",
-      "npm:tiddlywiki@^5.3.6"
+      "npm:tiddlywiki@^5.3.6",
+      "npm:tw5-typed@~0.5.14"
     ]
   }
 }

@@ -1,5 +1,6 @@
 import { ensureDir } from '@std/fs';
 import { join, extname, relative, dirname } from '@std/path';
+import { generateChatML } from './generateChatML.ts';
 
 async function readTidFilesAndCreateChatML(folderPath: string) {
   const dataFolderPath = join('data', folderPath);
@@ -33,9 +34,10 @@ async function readTidFilesAndCreateChatML(folderPath: string) {
   await processFolder(folderPath);
 }
 
-async function generateChatML(tidContent: string): Promise<string> {
-  // 生成 ChatML 内容的逻辑
-  return ``;
+async function callLLM(systemPrompt: string, userPrompt: string): Promise<string> {
+  // 调用 LLM API 的逻辑，提取为可替换的函数
+  // ...implementation...
+  return ''; // 返回助手的回复
 }
 
 if (import.meta.main) {
