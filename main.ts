@@ -34,13 +34,8 @@ async function readTidFilesAndCreateChatML(folderPath: string) {
   await processFolder(folderPath);
 }
 
-async function callLLM(systemPrompt: string, userPrompt: string): Promise<string> {
-  // 调用 LLM API 的逻辑，提取为可替换的函数
-  // ...implementation...
-  return ''; // 返回助手的回复
-}
-
+const subFolder = "core/wiki/config/ui";
 if (import.meta.main) {
-  const folderPath = join(Deno.cwd(), '..', 'TiddlyWiki5');
+  const folderPath = join(Deno.cwd(), '..', 'TiddlyWiki5', ...subFolder.split('/'));
   readTidFilesAndCreateChatML(folderPath);
 }

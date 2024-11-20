@@ -1,6 +1,12 @@
 import { join } from "@std/path";
-import "tw5-typed";
+import type {} from "tw5-typed";
 import { TiddlyWiki } from "tiddlywiki";
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  apiKey: Deno.env.get("DEEPSEEK_API_KEY"),
+  baseURL: "https://api.deepseek.com",
+});
 
 const wikiInstance = TiddlyWiki();
 const wikiPath = join(Deno.cwd(), "wiki");
@@ -15,18 +21,23 @@ export async function generateChatML(tidContent: string): Promise<string> {
     .filter((tiddler) => tiddler !== undefined)
     .filter((tiddler) => tiddler.fields.prompt !== undefined);
 
-  const chatmlContents = await Promise.all(dataPromptTiddlers.map(async (tiddler) => {
-    const prompt = tiddler.fields.prompt as string;
-    const AIOutput = await callLLM(prompt, tidContent);
-    const chatmlContent = wikiInstance.wiki.renderTiddler("text/plain", tiddler.fields.title, {
-      variables: {
-        prompt,
-        AIOutput,
-      }
-    })
-    return chatmlContent;
-  }))
-  
+  const chatmlContents = await Promise.all(
+    dataPromptTiddlers.map(async (tiddler) => {
+      const prompt = tiddler.fields.prompt as string;
+      const AIOutput = await callLLM(prompt, tidContent);
+      const chatmlContent = wikiInstance.wiki.renderTiddler(
+        "text/plain",
+        tiddler.fields.title,
+        {
+          variables: {
+            prompt,
+            AIOutput,
+          },
+        },
+      );
+      return chatmlContent;
+    }),
+  );
 
   // 合并所有消息
   return chatmlContents.join("");
@@ -36,7 +47,19 @@ async function callLLM(
   systemPrompt: string,
   userPrompt: string,
 ): Promise<string> {
-  // 调用 LLM API 的逻辑，提取为可替换的函数
-  // ...implementation...
-  return ""; // 返回助手的回复
+  console.log("Calling LLM with systemPrompt:", systemPrompt);
+  console.log("Calling LLM with userPrompt:", userPrompt);
+
+  const completion = await openai.chat.completions.create({
+    model: "deepseek-chat",
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+    "stream": false,
+  });
+
+  const assistantMessage = completion.choices[0]?.message?.content || "";
+  console.log("Received assistantMessage:", assistantMessage);
+  return assistantMessage;
 }
