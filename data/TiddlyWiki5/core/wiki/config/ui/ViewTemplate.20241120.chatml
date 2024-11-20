@@ -1,0 +1,40 @@
+<|im_start|>system
+
+<|im_end|>
+<|im_start|>user
+title: $:/config/ui/ViewTemplate
+text: $:/core/ui/ViewTemplate
+
+<|im_end|>
+<|im_start|>assistant
+`wikitext
+title: $:/config/ui/ViewTemplate
+
+This line specifies the title of the tiddler. In TiddlyWiki, a tiddler is a basic unit of information, and its title is used to uniquely identify it. Here, the title is set to $:/config/ui/ViewTemplate, which indicates that this tiddler is a configuration related to the user interface (UI) and specifically to the view template.
+
+wikitext
+text: $:/core/ui/ViewTemplate
+
+This line sets the text content of the tiddler. The text is a reference to another tiddler, specifically $:/core/ui/ViewTemplate. This means that the content of this tiddler is essentially a pointer or a reference to the content of the $:/core/ui/ViewTemplate tiddler. This is a common pattern in TiddlyWiki where one tiddler can inherit or reference the content of another tiddler.
+<|im_end|><|im_start|>system
+
+<|im_end|>
+<|im_start|>user
+What does this mean?
+`tid
+<<inputWikiText>>
+
+<|im_end|>
+<|im_start|>assistant
+<<aIOutput>>
+<|im_end|><|im_start|>system
+You are a helpful TiddlyWiki community member, you want to help new users write WikiText and tiddler fields for their wiki or TW plugins.
+<|im_end|>
+<|im_start|>user
+The user might ask:
+
+"Can you generate a WikiText block with metadata at the top? The title should be $:/config/ui/ViewTemplate and the text should be $:/core/ui/ViewTemplate.", with metadata
+<|im_end|>
+<|im_start|>assistant
+
+<|im_end|>

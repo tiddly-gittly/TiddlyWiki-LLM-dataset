@@ -55,5 +55,7 @@ You can join the project in [Paratranz](https://paratranz.cn/projects/12129), an
 ## How to run
 
 1. Have [Deno](https://deno.com/) installed
-1. Get a [DeepSeek API key](https://platform.deepseek.com/api_keys) or OpenAI API key, put it in a `.env` file, copied from [.env.template](./.env.template) file.
-1. Run `deno task dev`
+1. Clone this project and TiddlyWiki5 repo side by side in a folder.
+1. "cd" into this project's folder
+    1. Get a [DeepSeek API key](https://platform.deepseek.com/api_keys) or OpenAI API key, put it in a `.env` file, copied from [.env.template](./.env.template) file.
+    1. Run `deno task dev`
